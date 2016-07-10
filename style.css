@@ -1,8 +1,19 @@
-.newWordCard-cards{
+.card{
+	width: 100px;
+	height: 100px;
+	padding: 5px 5px 5px 5px;
+	margin: 5px 5px 5px 5px;
+	border: 1px solid #E0E0E0;
+	display: inline-block;
+	font-family: 'Open Sans' sans-serif;
+	font-weight: bold;
+}
+
+.word-cards{
 	color: #0078FF;
 }
 
 
-.newCustomerCard-cards{
+.customer-cards{
 	color: #FF0600;
 }

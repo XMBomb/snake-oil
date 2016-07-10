@@ -1,4 +1,7 @@
 <?php
+function __autoload($class_name) {
+	require_once $class_name . '.php';
+}
 
 $snakeOil = new SnakeOil();
 
@@ -8,8 +11,7 @@ $snakeOil = new SnakeOil();
 class SnakeOil{
 	const BAD_REQUEST_CODE = 400;
 	const SERVER_ERROR = 500;
-	private $wordCards = array();
-	private $customerCards = array();
+	private $cards = array();
 
 	function __construct(){
 		try{
@@ -32,29 +34,29 @@ class SnakeOil{
 		$wordsFile = new SplFileObject($filesToRead[0]);
 
 		while (!$wordsFile->eof()) {
-			$this->wordCards[] = trim($wordsFile->fgets());
+			$this->cards[CardType::WORD][] = new \Card(trim($wordsFile->fgets()), CardType::WORD);
 		}
 
 		$customersFile = new SplFileObject($filesToRead[1]);
 
 		while (!$customersFile->eof()) {
-			$this->customerCards[] = trim($customersFile->fgets());
+			$this->cards[CardType::CUSTOMER][] = new \Card(trim($customersFile->fgets()), CardType::CUSTOMER);
 		}
 	}
 
 	private function shuffleCards(){
-		shuffle($this->wordCards);
-		shuffle($this->customerCards);
+		shuffle($this->cards[CardType::CUSTOMER]);
+		shuffle($this->cards[CardType::WORD]);
 	}
 
 
 	private function processRequest(){
-		if(isset($_GET['newWordCard']) && !empty($_GET['newWordCard'])){
-			return $this->getWordCards($_GET['newWordCard']);
+		if(isset($_GET['word']) && !empty($_GET['word'])){
+			return $this->getCards($_GET['word'], CardType::WORD);
 		}
 
-		if(isset($_GET['newCustomerCard']) && !empty($_GET['newCustomerCard'])){
-			return $this->getCustomerCards($_GET['newCustomerCard']);
+		if(isset($_GET['customer']) && !empty($_GET['customer'])){
+			return $this->getCards($_GET['customer'], CardType::CUSTOMER);
 		}
 	}
 
@@ -65,20 +67,11 @@ class SnakeOil{
 		));
 	}
 
-	private function getWordCards($number){
-		$words = array();
+	private function getCards($number, $cardType){
+		$cards = array();
 		for ($i=0; $i < $number; $i++) { 
-			$words[] = $this->wordCards[$i];
+			$cards[] = $this->cards[$cardType][$i];
 		}
-		return $words;
-	}
-
-
-	private function getCustomerCards($number){
-		$customers = array();
-		for ($i=0; $i < $number; $i++) { 
-			$customers[] = $this->customerCards[$i];
-		}
-		return $customers;
+		return $cards;
 	}
 }
