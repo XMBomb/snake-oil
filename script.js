@@ -27,6 +27,9 @@ SnakeOil.prototype.setActionListeners = function(){
 				break;
 		}
 
+		var cardDiv = $(this).closest('div');
+		// cardDiv.addClass('bounceOutDown');
+
 		SnakeOil.prototype.getCards(cardTypeOfRemovedElement, 1, false);
 	});
 };
@@ -58,7 +61,7 @@ SnakeOil.prototype.clearCards = function(){
 	SnakeOil.currentCards.customers = [];
 };
 
-SnakeOil.prototype.addCards = function(cards){
+SnakeOil.prototype.addCards = function(cards, index){
 	console.debug(cards);
 	switch(cards[0].type){
 		case 'word':
@@ -79,7 +82,7 @@ SnakeOil.prototype.displayCards = function(){
 	var cardType = '';
 	// TODO: fix this redundant mess
 	$.each(SnakeOil.currentCards.words, function(index, card) {
-		html += '<div class="card '+card.type+'-card" data-type="'+card.type+'"><button type="button" class="remove-card" data-card-type="'+card.type+'" data-card-index="'+index+'">x</button><span>'+card.name+'</span></div>';
+		html += SnakeOil.prototype.assembleCardHtml(card, index);
 		cardType = card.type;
 	});
 
@@ -88,11 +91,19 @@ SnakeOil.prototype.displayCards = function(){
 	html = '';
 
 	$.each(SnakeOil.currentCards.customers, function(index, card) {
-		html += '<div class="card '+card.type+'-card" data-type="'+card.type+'"><button type="button" class="remove-card" data-card-type="'+card.type+'" data-card-index="'+index+'">x</button><span>'+card.name+'</span></div>';
+		html += SnakeOil.prototype.assembleCardHtml(card, index);
 		cardType = card.type;
 	});
 
 	$('.'+cardType+'-cards').html(html);
+};
+
+SnakeOil.prototype.assembleCardHtml = function(card, index){
+	return ''+ 
+		'<div class="card '+card.type+'-card animated" data-type="'+card.type+'">'+
+			'<button type="button" class="close remove-card" data-card-type="'+card.type+'" data-card-index="'+index+'">&times;</button>'+
+			'<span>'+card.name+'</span>'+
+		'</div>';
 };
 
 

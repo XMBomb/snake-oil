@@ -3,9 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Snake Oil</title>
 	<link rel="stylesheet" href="style.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
+	<link rel="stylesheet" href="animate.css">
+	<title>Snake Oil</title>
 </head>
 <body>
 <div class="container-fluid">
