@@ -6,6 +6,7 @@
 class Card implements JsonSerializable{
 	private $name;
 	private $type;
+	private $imageHtml;
 
 	function __construct($name, $type){
 		$this->name = $name;
@@ -16,6 +17,7 @@ class Card implements JsonSerializable{
 		return array(
 			'name' => $this->getName(),
 			'type' => $this->getType(),
+			'imageHtml' => $this->getImageHtml(),
 		);
 	}
 
@@ -51,4 +53,20 @@ class Card implements JsonSerializable{
 	*/
 	public function setType($type){ $this->type = $type; }
 
+
+	/**
+	* Gets the value of imageHtml.
+	*
+	* @return mixed
+	*/
+	public function getImageHtml() { return $this->imageHtml; }
+
+	/**
+	* Sets the value of imageHtml.
+	*
+	* @param mixed $imageHtml the image html
+	*
+	* @return self
+	*/
+	public function setImageHtml($imageHtml){ $this->imageHtml = $imageHtml; }
 }

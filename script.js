@@ -49,7 +49,8 @@ SnakeOil.prototype.getCards = function(method, number, clearExistingCards){
 			if (data.message){
 				alert(data.message);
 			}else{
-				alert("An unknown error occured.");
+				console.debug(data);
+				// alert("An unknown error occured.");
 			}
 		}
 	});
@@ -100,12 +101,12 @@ SnakeOil.prototype.displayCards = function(){
 
 SnakeOil.prototype.assembleCardHtml = function(card, index){
 	return ''+ 
-		'<div class="card '+card.type+'-card animated" data-type="'+card.type+'">'+
+		'<div class="card '+card.type+'-card" data-type="'+card.type+'" id="card-'+card.type+'-'+index+'">'+
 			'<button type="button" class="close remove-card" data-card-type="'+card.type+'" data-card-index="'+index+'">&times;</button>'+
 			'<span>'+card.name+'</span>'+
+			'<img class="word-image" src="'+card.imageHtml+'">'+
 		'</div>';
 };
-
 
 $(document).ready(function(){
 	var snakeOil = new SnakeOil();

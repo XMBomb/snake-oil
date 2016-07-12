@@ -1,156 +1,148 @@
 Actor
-Alien Abductee
 Alien
+Alien Abductee
 Amputee
-Astronaut
-Amputee
-Astronaut
 Artist
+Astronaut
 Babysitter
-Bartender
 Bank Robber
-Biker
+Bartender
 Beach Bum
-Billionaire
 Beggar
-Blind Date
 Big Foot
+Biker
+Billionaire
+Blind Date
 Bouncer
 Bridesmaid
-Camp Counselor
 Bull Fighter
-Camper
 Bungee Jumper
-Caveman
+Camp Counselor
+Camper
 Castaway
+Caveman
 Cheerleader
 Chef
 Class Clown
+Clown
 Coach
-Clown
 Coal Miner
-Clown
-Cowboy
 Comedian
-Cupid
 Couch Potato
+Cowboy
+Cupid
 Dad
-Dictator
 Dare Devil
-Drill Sergeant
+Dictator
 Diva
-Dumpster Diver
 Doctor
+Dog
+Drill Sergeant
+Dumpster Diver
 Executioner
-Dog
-Fire Fighter
-Dog
-Fire Fighter
 Fashion Model
-Fortune Teller
+Fire Fighter
 Fisherman
 Fortune Teller
-Geek
 Frat Boy
-Gladiator
 Gambler
-Grandma
 Gangster
-High School Dropout
+Geek
 Ghost
-Hippie
 Girl Scout
-Hitch Hiker
+Gladiator
+Grandma
 Grave Robber
-Hobo
 Haunted House Actor
-Immigrant
+High School Dropout
 High School Student
-Insomniac
+Hippie
+Hitch Hiker
+Hobo
 Hostage
-Kindergartener
 Hunter
-Life Guard
+Immigrant
+Insomniac
 Janitor
-Life Guard
+Kindergartener
 Last Person On Earth
-Lovers
 Lawyer
-Lumberjack
+Life Guard
 Little Red Ridinghood
-Masseuse
 Lottery Winner
-Missionary
+Lovers
+Lumberjack
 Mad Scientist
-Mob Boss
 Magician
-Nanny
+Masseuse
+Missionary
+Mob Boss
 Monk
-Navy Seal
 Mortician
+Nanny
+Navy Seal
 Newlywed
 Ninja
-Paper Boy
 Nurse
-Pharaoh
 Olympic Athlete
-Pirate
 Paparazzi
-Pizza Deliverer
+Paper Boy
 Party Animal
-Police Officer
 Party Host
+Pharaoh
+Pirate
+Pizza Deliverer
 Police Officer
-Pop Singer
 Politician
-Prisoner of War
+Pop Singer
 Pregnant Woman
-Prison Guard
 Priest
-Pro Wrestler
 Princess
-Quarterback
+Prison Guard
+Prisoner of War
+Pro Wrestler
 Prom Date
-Rioter
 Protester
-Robot
+Quarterback
 Queen
-Rock star
 Rapper
-Roommate
 Referee
-School Bus Driver
+Rioter
+Robot
 Rock Climber
-Soldier
+Rock star
+Roommate
 Runaway
-Space Colonist
 Santa
-Sports Fan
+School Bus Driver
 Secret Admirer
-Sports Mascot
 Senior Citizen
-Spy
 Snowman
-Substitute Teacher
+Soldier
 Sorority Girl
-Tailgater
+Space Colonist
+Sports Fan
+Sports Mascot
+Spy
 Stewardess
-Tarzan
+Substitute Teacher
 Super Hero
-Taxi Driver
 Surfer
-Teenager
+Tailgater
+Tarzan
+Taxi Driver
 Teacher
-Tourist
+Teenager
 The President
-Vampire
 Therapist
-Villain
 Toddler
-Waitress
+Tourist
 Treasure Hunter
-Witch
 Tree Hugger
-Wizard
 Trucker
+Vampire
+Villain
+Waitress
+Witch
+Wizard
 Zombie

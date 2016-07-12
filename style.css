@@ -1,6 +1,6 @@
 .card{
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	height: 300px;
 	padding: 5px 5px 5px 5px;
 	margin: 5px 5px 5px 5px;
 	border: 1px solid #E0E0E0;
@@ -16,6 +16,13 @@ h1{
 	font-weight: 300!important;
 }
 
+img.word-image{
+	display: block;
+	margin: auto;
+	width: 180px;
+	max-height: 220px;
+}
+
 .new-game{
 	margin: 0 20px 20px 0;
 }
@@ -24,7 +31,6 @@ h1{
 	background-color: #3B30B3;
 	color: #FFF;
 }
-
 
 .customer-card{
 	background-color: #22985E;

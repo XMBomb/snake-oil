@@ -21,26 +21,25 @@ class SnakeOil{
 			$this->respond($cards);
 		}catch(Exception $e){
 			http_response_code(self::SERVER_ERROR);
-			echo 'Internal Server Error!';
+			echo 'Internal Server Error: '.$e->getMessage();
 		}
 	}
 
 	private function readConfig(){
-		$filesToRead = array(
-			'words.txt',
-			'customers.txt'
-		);
-
-		$wordsFile = new SplFileObject($filesToRead[0]);
+		$wordsFile = new SplFileObject('words.txt');
 
 		while (!$wordsFile->eof()) {
-			$this->cards[CardType::WORD][] = new \Card(trim($wordsFile->fgets()), CardType::WORD);
+			$card =  new Card(trim($wordsFile->fgets()), CardType::WORD);
+			$card->setImageHtml('img/words/'.$card->getName().'.jpg');
+			$this->cards[CardType::WORD][] = $card;
 		}
 
-		$customersFile = new SplFileObject($filesToRead[1]);
+		$customersFile = new SplFileObject('customers.txt');
 
 		while (!$customersFile->eof()) {
-			$this->cards[CardType::CUSTOMER][] = new \Card(trim($customersFile->fgets()), CardType::CUSTOMER);
+			$card =  new Card(trim($customersFile->fgets()), CardType::CUSTOMER);
+			$card->setImageHtml('img/customers/'.$card->getName().'.jpg');
+			$this->cards[CardType::CUSTOMER][] = $card;
 		}
 	}
 

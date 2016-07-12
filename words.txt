@@ -1,3 +1,6 @@
+Dinosaur
+Jar
+Sandwich
 acid
 adventure
 air
@@ -120,7 +123,6 @@ cliff
 cloak
 clock
 closet
-butt
 club
 coat
 coffin
@@ -159,7 +161,6 @@ detector
 diamond
 diaper
 diary
-Dinosaur
 dirt
 discipline
 disease
@@ -307,7 +308,6 @@ ink
 insect
 island
 jacket
-Jar
 jello
 jelly
 jewel
@@ -510,7 +510,6 @@ saddle
 safety
 salad
 sand
-Sandwich
 satellite
 sauce
 sauna –
